@@ -187,25 +187,39 @@
     # remove any if you want a working colorscheme. Most of them are described under
     # :help highlight-default, the others are taken from :help group-name. Both help sections
     # are good reads, by the way.
-    highlights = [ # [ Highlight bgcolor bgcolor style styleColor ]
-        [ "Normal", darker_grey, lighter_grey, "NONE" ],
+    highlights = [
+      # [ Highlight bgcolor bgcolor style styleColor ]
+        [ "Normal",    black_1,  white_1,    "NONE" ],
+        [ "Statement", "NONE",  orange_2,   "NONE" ],
+        [ "Comment",   "NONE",  purple,     "NONE" ],
+        [ "LineNr",    gray_5,  gray_3,     "NONE" ],
+        [ "rubySymbol","NONE",  slate_4,    "NONE"], #ctermfg=66
+        [ "rubyStringDelimiter","NONE", green_5, "NONE" ], #ctermfg=82
+        [ "rubyInterpolation",  "NONE", white, "NONE" ], #ctermfg=White
+        [ "rubyPseudoVariable", "NONE", slate_4, "NONE" ],  #ctermfg=66
+        [ "String",   "NONE", green_5, "NONE" ],
+        [ "Constant", "NONE", yellow_4, "NONE" ],
+        [ "Function", "NONE", yellow_1, "NONE" ],
+        [ "SpellBad", "NONE", red_5,  "undercurl", red_5 ],
+        [ "SpellCap", "NONE", "NONE", "undercurl", teal_2 ],
+        [ "SpellLocal", "NONE", green_5, "undercurl", green_5 ],
+        [ "SpellRare", "NONE", orange_5, "undercurl", orange_5 ],
+        [ "Keyword", "Statement" ],
+        [ "Define", "Statement" ],
+
+        ## UNSET FOR NOW 
         [ "NonText", "NONE", medium_grey, "NONE" ],
         [ "EndOfBuffer", "NONE", medium_grey, "NONE" ],
-        [ "LineNr", almost_black, light_grey, "NONE" ],
         [ "FoldColumn", almost_black, light_grey, "NONE" ],
         [ "Folded", almost_black, light_grey, "NONE" ],
         [ "MatchParen", almost_black, yellow, "NONE" ],
         [ "SignColumn", almost_black, light_grey, "NONE" ],
-        [ "Comment", "NONE", medium_grey, "NONE" ],
         [ "Conceal", "NONE", lighter_grey, "NONE" ],
-        [ "Constant", "NONE", orange, "NONE" ],
         [ "Error", "NONE", red, "reverse" ],
         [ "Identifier", "NONE", blue, "NONE" ],
         [ "Ignore", "NONE", "NONE", "NONE" ],
         [ "PreProc", "NONE", aqua, "NONE" ],
         [ "Special", "NONE", green, "NONE" ],
-        [ "Statement", "NONE", light_blue, "NONE" ],
-        [ "String", "NONE", light_green, "NONE" ],
         [ "Todo", "NONE", "NONE", "reverse" ],
         [ "Type", "NONE", light_purple, "NONE" ],
         [ "Underlined", "NONE", aqua, "underline" ],
@@ -249,10 +263,6 @@
         [ "Directory", "NONE", light_aqua, "NONE" ],
         [ "debugPC", blue, "NONE", "NONE" ],
         [ "debugBreakpoint", red, "NONE", "NONE" ],
-        [ "SpellBad", "NONE", red, "undercurl", red ],
-        [ "SpellCap", "NONE", light_aqua, "undercurl", light_aqua ],
-        [ "SpellLocal", "NONE", green, "undercurl", green ],
-        [ "SpellRare", "NONE", orange, "undercurl", orange ],
         [ "ColorColumn", almost_black, "NONE", "NONE" ],
         [ "Terminal", "Normal" ],
         [ "Number", "Constant" ],
@@ -268,7 +278,6 @@
         [ "HelpCommand", "Statement" ],
         [ "HelpExample", "Statement" ],
         [ "Include", "PreProc" ],
-        [ "Keyword", "Statement" ],
         [ "Label", "Statement" ],
         [ "Macro", "PreProc" ],
         [ "Number", "Constant" ],
