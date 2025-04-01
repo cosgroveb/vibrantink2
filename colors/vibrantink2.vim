@@ -12,7 +12,7 @@ endif
 let colors_name = "vibrantink2"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
-    hi Normal ctermbg=16 ctermfg=255 cterm=NONE guibg=#000000 guifg=#eeeeee gui=NONE
+    hi Normal ctermbg=NONE ctermfg=255 cterm=NONE guibg=#000000 guifg=#eeeeee gui=NONE
 
     set background=dark
 
@@ -30,8 +30,8 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi SpellCap ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl guisp=#00d7ff
     hi SpellLocal ctermbg=NONE ctermfg=46 cterm=undercurl guibg=NONE guifg=#00ff00 gui=undercurl guisp=#00ff00
     hi SpellRare ctermbg=NONE ctermfg=216 cterm=undercurl guibg=NONE guifg=#ffaf87 gui=undercurl guisp=#ffaf87
-    hi Search ctermbg=66 ctermfg=16 cterm=NONE guibg=#5f8787 guifg=#000000 gui=NONE
-    hi Todo ctermbg=101 ctermfg=16 cterm=NONE guibg=#87875f guifg=#000000 gui=NONE
+    hi Search ctermbg=66 ctermfg=NONE cterm=NONE guibg=#5f8787 guifg=#000000 gui=NONE
+    hi Todo ctermbg=101 ctermfg=NONE cterm=NONE guibg=#87875f guifg=#000000 gui=NONE
     hi SignColumn ctermbg=234 ctermfg=242 cterm=NONE guibg=#1c1c1c guifg=#6c6c6c gui=NONE
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
