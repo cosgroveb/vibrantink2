@@ -9,10 +9,10 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "vibrantink2"
+let colors_name = "vibrantink3"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
-    hi Normal ctermbg=NONE ctermfg=255 cterm=NONE guibg=#000000 guifg=#eeeeee gui=NONE
+    hi Normal ctermbg=black ctermfg=255 cterm=NONE guibg=#000000 guifg=#eeeeee gui=NONE
 
     set background=dark
 
@@ -79,7 +79,7 @@ let g:terminal_ansi_colors = [
         \ '#8fafd7',
         \ '#8787af',
         \ '#5fafaf',
-        \ '#ffffff',
+        \ '#000000',
         \ ]
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)
